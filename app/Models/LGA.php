@@ -11,4 +11,13 @@ class LGA extends Model
 
     protected $table = 'lga';
 
+    public function Wards()
+    {
+        return $this->hasMany(Ward::class,'lga_id','lga_id');
+    }
+
+    public function State()
+    {
+        return $this->belongsTo(States::class,'state_id','state_id');
+    }
 }

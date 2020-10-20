@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PollingUnitController;
+use App\Http\Controllers\PollingUnitResultController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('table2.index');
 });
+
+Route::resource('pollingUnit', PollingUnitController::class);
+
+Route::resource('result-pu', PollingUnitResultController::class);
