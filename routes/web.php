@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('table2.index');
-});
+// Route::get('/', function () {
+//     return view('table2.index');
+// });
 
 Route::resource('pollingUnit', PollingUnitController::class);
 
